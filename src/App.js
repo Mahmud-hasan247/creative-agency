@@ -1,25 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import LandingPage from './Pages/LandingPage';
+import LoginPage from './Pages/LoginPage';
+import DashboardPage from './Pages/DashboardPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import NotFound from './Components/NotFound/NotFound';
+import { createContext } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ServiceList from './Components/DashboardComponents/ClientDashboard/ServiceList/ServiceList';
+
+export const userContext = createContext()
 
 function App() {
+
+  const [loggedInUser, setLoggedInUser] = useState({})
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <Router>
+          <Switch>
+            <Route path="/home">
+              <LandingPage></LandingPage>
+            </Route>
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+            <Route exact path="/">
+              <LandingPage></LandingPage>
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <DashboardPage />
+            </PrivateRoute>
+            <PrivateRoute path='/orderNowFor/:title'>
+              <DashboardPage/>
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Router>
+        </userContext.Provider>
+    </>
   );
 }
 

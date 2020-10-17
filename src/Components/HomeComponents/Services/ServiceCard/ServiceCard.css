@@ -1,0 +1,26 @@
+@keyframes runningBox {
+    0%{
+        margin-bottom: 0;
+    }
+    25%{
+        margin-left: 10px;
+    }
+    50%{
+        margin-top: 10px;
+    }
+    75%{
+        margin-right: 10px;
+    }
+    100%{
+        margin-bottom: 10px;
+    }
+}
+
+.service-card{
+    padding: 30px;
+}
+.service-card:hover{
+    animation: runningBox 3s ease-in-out 0.5s infinite alternate ;
+    box-shadow: 5px 5px 20px gray;
+    border-radius: 10px;
+}

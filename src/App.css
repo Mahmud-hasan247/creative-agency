@@ -27,6 +27,28 @@
 .App-link {
   color: #61dafb;
 }
+.my-font{
+  font-family: 'Poppins', sans-serif;
+}
+.my-button{
+  width: 134px;
+}
+.sidebar-item:hover{
+    color:#009444;
+    cursor: pointer;
+}
+.dashboardBackground{
+  background-color: #F4F7FC;
+  height: 600px;
+  width: 101%;
+}
+.done{
+  width: 100px;
+  height: 40px;
+  background-color: #C6FFE0;
+  border-radius: 10px;
+  color: #009444;
+}
 
 @keyframes App-logo-spin {
   from {
