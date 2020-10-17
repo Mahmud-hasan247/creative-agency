@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Order.css';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router-dom';
+import { userContext } from '../../../../App';
 
 const Order = () => {
 
+    const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
@@ -27,7 +29,7 @@ const Order = () => {
                 <main className='dashboardBackground'>
                     <form onSubmit={handleSubmit(onSubmit)} className='pt-5 ' action="">
                         <input ref={register({ required: true })} className='order-input' name='name' placeholder='Your name / company name' type="text" /> <br />
-                        <input ref={register({ required: true })} className='order-input' name='email' placeholder='Your Email' type="email" /><br />
+                        <input ref={register({ required: true })} className='order-input' name='email' placeholder='Your Email' defaultValue={loggedInUser.email} type="email" /><br />
                         <input ref={register({ required: true })} className='order-input' name='serviceName' placeholder='Service Name' defaultValue={title} type="text" /><br />
                         <input ref={register({ required: true })} className='order-input' name='projectDetail' id='project-detail' placeholder='Project detail' type="text" /><br />
                         <input ref={register({ required: true })} className='order-input' name='price' id='price' placeholder='Price' type="text" />
