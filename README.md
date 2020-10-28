@@ -1,7 +1,7 @@
-#Creative Agency
-###A Full stack responsive service seller web application with admin panel
+# Creative Agency
+### A Full stack responsive service seller web application with admin panel
 
-#####Here is some feature of this project...
+##### Here is some feature of this project...
 
 * You can order for a service with your project detail and budget.
 * You can post a review for this company, that will be shown on the homepage.
