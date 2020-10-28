@@ -15,13 +15,16 @@
 
 #### Used Technologies...
 * JavaScript
+* ES6
 * ReactJS
 * html5
 * Css3
 * Bootstrap
 * node.js
-* mongoDB
 * express
+* MongoDB
+* Firebase
+* Heroku
 
 [Website](https://creative-agency-391a7.web.app/ "Creative Agency") | [ServerRepo](https://github.com/Mahmud-hasan247/creative-agency-server "Creative Agency Server") |
 [LinkedIn](https://www.linkedin.com/in/mahmudhasan247/ "Mahmud hasan") | [Portfolio](https://www.linkedin.com/in/mahmudhasan247/ "Mahmud hasan")
