@@ -1,3 +1,16 @@
+#Creative Agency
+###A Full stack responsive service seller web application with admin panel
+
+#####Here is some feature of this project...
+
+* You can order for a service with your project detail and budget.
+* You can post a review for this company, that will be shown on the homepage.
+* An admin can add a new service, that will be shown on the homepage.
+* Admin can remove all ordered services.
+* Admin can make others admin.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
