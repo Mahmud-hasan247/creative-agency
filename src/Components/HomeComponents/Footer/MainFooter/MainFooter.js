@@ -5,7 +5,7 @@ const MainFooter = () => {
     return (
         <>
             <div className='row'>
-                <div className="col-md-6 my-font">
+                <div className="col-md-6 my-font p-5">
                     <h1 className='pt-5 pb-5'>Let us handle your <br /> project professionally.</h1>
                     <p className='pb-5'>Consectetur adipisicing elit. Sequi rem quisquam aspernatur, doloribus minus quibusdam. At quos adipisci asperiores eos voluptates dicta voluptatibus ipsum placeat ratione, aperiam, vitae quasi dolore!</p>
                 </div>
