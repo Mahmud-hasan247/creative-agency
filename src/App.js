@@ -12,6 +12,8 @@ import NotFound from './Components/NotFound/NotFound';
 import { createContext } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ServiceList from './Components/DashboardComponents/ClientDashboard/ServiceList/ServiceList';
+import MainFooter from './Components/HomeComponents/Footer/MainFooter/MainFooter';
+import Footer from './Components/HomeComponents/Footer/Footer';
 
 export const userContext = createContext()
 
@@ -29,6 +31,9 @@ function App() {
             </Route>
             <Route path="/login">
               <LoginPage />
+            </Route>
+            <Route path='/contact'>
+              <Footer></Footer>
             </Route>
             <Route exact path="/">
               <LandingPage></LandingPage>

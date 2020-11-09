@@ -39,12 +39,12 @@ const Navbar = () => {
                                     <a className="nav-link my-font" href="#">Dashboard</a>
                                 </Link>
                             </li>
-                            <li className="nav-item mr-3">
+                            {/* <li className="nav-item mr-3">
                                 <a className="nav-link my-font" href="#">Our Team</a>
                             </li>
                             <li className="nav-item mr-3">
                                 <a className="nav-link my-font" href="#">Contact Us</a>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 {
                                     (loggedInUser.email || sessionStorage.getItem('authToken')) ? <button onClick={signOut} className="btn btn-dark my-button my-font">Log Out</button>
