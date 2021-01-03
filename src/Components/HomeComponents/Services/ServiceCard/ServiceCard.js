@@ -29,7 +29,10 @@ const ServiceCard = () => {
                     <div className="spinner">
                         <div
                             className="spinner-grow"
-                            style={{ width: "3rem", height: "3rem", marginLeft: "49%" }}
+                            style={{
+                                width: "3rem",
+                                height: "3rem"
+                            }}
                             role="status"
                         >
                         </div>
